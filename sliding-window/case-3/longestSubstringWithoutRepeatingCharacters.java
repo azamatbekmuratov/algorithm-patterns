@@ -1,5 +1,7 @@
 import java.util.HashSet;
 
+
+// Solution for the longest substring without repeating characters
 class LongestSubstringWithoutRepeatingCharacters {
     public static int longestSubstring(String input) {
         HashSet<Character> charSet = new HashSet<Character>();

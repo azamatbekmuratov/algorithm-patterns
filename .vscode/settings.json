@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "sliding-window/case-2",
         "sliding-window/case-1",
-        "sliding-window/case-2"
+        "sliding-window/case-3"
     ]
 }

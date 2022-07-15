@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "sliding-window/case-4",
         "sliding-window/case-3",
         "sliding-window/case-2",
         "sliding-window/case-1",
-        "sliding-window/case-4"
+        "arrays-hashing/case-3"
     ]
 }

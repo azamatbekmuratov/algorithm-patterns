@@ -3,7 +3,10 @@
 // Valid operators are +, -, *, and /. Each operand may be an integer or another expression.
 package main
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 type Stack []int
 
@@ -33,23 +36,24 @@ func evalRPN(tokens []string) int {
 	for _, c := range tokens {
 		if c == "+" {
 			stack.Push(stack.Pop() + stack.Pop())
-		}
-		if c == "-" {
+		} else if c == "-" {
 			a, b := stack.Pop(), stack.Pop()
 			stack.Push(b - a)
-		}
-		if c == "*" {
+		} else if c == "*" {
 			stack.Push(stack.Pop() * stack.Pop())
-		}
-		if c == "/" {
+		} else if c == "/" {
 			a, b := stack.Pop(), stack.Pop()
 			stack.Push(b / a)
 		} else {
 			digit, err := strconv.Atoi(c)
-			if err != nil {
+			if err == nil {
 				stack.Push(digit)
 			}
 		}
 	}
 	return stack[0]
+}
+
+func main() {
+	fmt.Printf("Result: %v\n", evalRPN([]string{"2", "1", "+", "3", "*"}))
 }

@@ -6,7 +6,7 @@ class TwoSum {
         while(l < r) {
             if(numbers[l] + numbers[r] == target) break;
 
-            if(numbers[l] + numbers[r] < target) {
+             rget) {
                 l++;
                 continue;
             }

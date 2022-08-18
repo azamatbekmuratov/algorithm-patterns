@@ -1,3 +1,4 @@
+// Valid Palindrome solution in Golang language using two pointer technique
 package main
 
 import (

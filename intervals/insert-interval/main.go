@@ -1,8 +1,6 @@
 // Insert Interval. Solution in Golang language
 package main
 
-import "fmt"
-
 func insert(intervals [][]int, newInterval []int) [][]int {
 	var res [][]int
 
@@ -16,7 +14,6 @@ func insert(intervals [][]int, newInterval []int) [][]int {
 		} else {
 			newInterval = []int{min(newInterval[0], intervals[i][0]), max(newInterval[1], intervals[i][1])}
 		}
-		fmt.Println(newInterval)
 	}
 	res = append(res, newInterval)
 	return res
